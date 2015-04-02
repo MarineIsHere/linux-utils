@@ -38,8 +38,8 @@ then
     do
         for j in ${DEST[@]}
         do
-            [[ $MODE =~ ^([dD])$ ]] && rsync -haurov $i $j
-            [[ ! $MODE =~ ^([dD])$ ]] && rsync -hauro $i $j
+            [[ $MODE =~ ^([dD])$ ]] && rsync -haurovn $i $j
+            [[ ! $MODE =~ ^([dD])$ ]] && rsync -haurov $i $j
         done
     done
     else
